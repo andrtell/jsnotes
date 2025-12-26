@@ -3,7 +3,6 @@
 # Typescript
 
 [Typescript](https://www.typescriptlang.org/)
+*[Docs](https://www.typescriptlang.org/docs/)
+*[Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 
-[Typescript / Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-
-[Typescript / Docs](https://www.typescriptlang.org/docs/)

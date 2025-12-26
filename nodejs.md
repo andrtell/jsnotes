@@ -3,8 +3,8 @@
 # NodeJS
 
 [NodeJS](https://nodejs.org/en) 
-* [Learn](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) 
 * [Docs](https://nodejs.org/docs/latest/api/)
+* [Learn](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) 
 
 ## Notes
 
