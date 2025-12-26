@@ -5,6 +5,6 @@ __Links__
 - [Typescript](https://www.typescriptlang.org/)
 
   - [Docs](https://www.typescriptlang.org/docs/)
-  - [Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+  - [Tutorial](https://www.typescriptlang.org/docs/handbook/intro.html)
 
 __Notes__
