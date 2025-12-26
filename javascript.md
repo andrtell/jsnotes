@@ -8,7 +8,7 @@ ECMAScript
 > [Proposals](https://github.com/tc39/proposals)
 
 
-[MDN](https://developer.mozilla.org/en-US/)
+MDN
 > [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 >
 > [JS Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
