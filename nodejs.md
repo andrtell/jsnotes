@@ -1,12 +1,14 @@
 [Top](README.md)
 
-Links
+__Links__
+
 - [NodeJS](https://nodejs.org/en)
   
   - [Docs](https://nodejs.org/docs/latest/api/)
   - [Learn](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) 
 
-Notes
+__Notes__
+
 - [Install](nodejs/install.md)
 
 
