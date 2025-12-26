@@ -26,19 +26,18 @@ _Load_
 
 ```
 <script src="z.js"> 
-
-
+```
+```
                    ┌── JS download ──┬── JS execution ──┐                  
 └── HTML parsing ──┘                                    └── HTML parsing ──┘
-
 ```
 
 ```
 <script defer src="z.js"> 
 
 
-                   ┌── JS download ──┐    ┌── JS execution ──┐
-└── HTML parsing ─────────────────────────┘ 
+                          ┌── JS download ──┐           ┌── JS execution ──┐
+└── HTML parsing ───────────────────────────────────────┘ 
 
 ```
 
