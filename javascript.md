@@ -15,3 +15,5 @@ __Links__
   - [Javascript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 __Notes__
+
+- ["strict mode"](./javascript/strict_mode.md)
