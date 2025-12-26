@@ -1,6 +1,7 @@
 [Top](README.md)
 
-Links
+__Links__
+
 - ECMAScript
 
   - [2026 Language Specification](https://tc39.es/ecma262/)
@@ -13,4 +14,4 @@ Links
   - [Javscript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
   - [Javascript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
-Notes
+__Notes__
