@@ -10,4 +10,6 @@ __Browser__
 "use strict"; // put before any other statement.
 ```
 
-Note: es6 modules are always `strict`.
+__Notes__
+
+ES6 modules are always `strict`.
