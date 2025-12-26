@@ -2,7 +2,7 @@
 
 # NodeJS
 
-[install](node/install.md)
+[install](nodejs/install.md)
 
 
 
