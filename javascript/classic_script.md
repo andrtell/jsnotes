@@ -14,34 +14,36 @@ Top-level names in classic scripts are global (added to `window`).
 ```html
 <script>
     var x = 1;
-    function y() { console.log('x = ' + x); }
+    function g(val) { console.log('val = ' + val); }
 </script>
 
 <script>
-    y(); // console: x = 1
+    g(x); // console: val = 1
 </script>
 ```
 
 _Load_
 
 ```
-<script src="x.js"> 
+<script src=".."> 
 
-                 ├─ JS Download ─┤├─ JS Execution ─┤
-├─ HTML Parsing ─┤          HTML Paused            ├─ HTML Parsing ─┤
+╷                  ┌── JS download ──┐┌── JS execution ──┐                  ╷
+└── HTML parsing ──┘                 └┘                  └── HTML parsing ──┘
+
 ```
 
-Blocks HTML parsing unless `defer` or `async` is used.
+```
+<script defer src=".."> 
 
-Each inclusion is loaded and executed (3 times below).
+╷                  ┌── JS download ──┐    ┌── JS execution ──┐
+└── HTML parsing ─────────────────────────┘                  ╵
 
-```html
-<script src="script.js"></script>
+```
 
-<!-- Blocked ... -->
+```
+<script async src=".."> 
 
-<script defer src="script.js"></script>
-<script async src="script.js"></script>
+╷                   ┌── JS download ──┐┌── JS execution ──┐                  ╷
+└── HTML parsing ──────────────────────┘                  └── HTML parsing ──┘
 
-<!-- Not blocked ... -->
 ```
