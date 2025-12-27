@@ -202,10 +202,6 @@ In the browser _module specifiers_ can be translated using an _import map_.
   {
     "imports": {
       "shapes": "./shapes/square.js",
-      "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/square.js": "./shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
-      "../shapes/square": "./shapes/square.js"
     }
   }
 </script>
