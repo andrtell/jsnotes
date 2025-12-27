@@ -26,7 +26,7 @@ Top-level names in modules are private to the module (unless exported).
 _Load_
 
 ```html
-<script type="module" src="z.js"></script> 
+<script type="module" src="z.js">
 ```
 
 ```
@@ -35,7 +35,7 @@ _Load_
 ```
 
 ```html
-<script type="module" async src="z.js"></script>
+<script type="module" async src="z.js">
 ```
 
 ```
@@ -53,8 +53,8 @@ is equivalent to:
 
 
 ```html
-<script type="module" async src="z.js"></script> 
-<script type="module" async src="z.js"></script>
+<script type="module" src="z.js"></script> 
+<script type="module" src="z.js"></script>
 ```
 
 __NodeJS__
