@@ -7,22 +7,9 @@ MDN
 
 __Browser__
 
-_Scope_
-
-Top-level names in classic scripts are global (added to `window`).
-
-```html
-<script>
-    var x = 1;
-    function g(a) { console.log('a = ' + a); }
-</script>
-
-<script>
-    g(x); // console: a = 1
-</script>
-```
-
 _Load_
+
+Classic scripts can be loaded via the `<script>` tag.
 
 ```html
 <script src="z.js"> 
@@ -49,3 +36,20 @@ _Load_
                     ┌── JS download ──┬── JS execution ──┐                  
 └── HTML parsing ─────────────────────┘                  └── HTML parsing ──┘
 ```
+
+_Scope_
+
+Top-level names in classic scripts are made global (as properties on `window`).
+
+```html
+<script>
+    var x = 1;
+    function g(a) { console.log(a); }
+</script>
+
+<script>
+    g(x); // ~> 1
+    window.g(window.x); // ~> 1
+</script>
+```
+
