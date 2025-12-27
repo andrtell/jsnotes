@@ -20,3 +20,5 @@ __Notes__
 ["strict mode"](./javascript/strict_mode.md)
 
 [Classic scripts](./javascript/classic_script.md) 
+
+[Modules](./javascript/modules.md) 
