@@ -195,7 +195,7 @@ export function c() {};
 
 _Import maps_
 
-In the browser _module specifiers_ can be translated using an _import map_.
+_Module specifiers_ can be rewritten using an _import map_.
 
 ```html
 <script type="importmap">
