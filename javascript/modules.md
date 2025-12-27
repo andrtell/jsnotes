@@ -77,11 +77,11 @@ export function f(v) { console.log('v = ' + v); }
 
 ```javascript
 // ./b.js
-const x = 1;
+const y = 1;
 
 function g(w) { console.log('w = ' + w); }
 
-export {x, g};
+export {y, g};
 ```
 
 __NodeJS__
