@@ -97,6 +97,18 @@ a
 top
 ```
 
+There ever only exists _one instance_ of a module. 
+
+Modules are _singeltons_.
+
+```html
+<script type="module">
+    import * as X from './a.js';
+    import * as Y from './a.js';
+    console.log(X === Y); // ~> true
+</script>
+```
+
 _Export / Import_
 
 Modules can `export` bindings that can be aliased using `import`.
