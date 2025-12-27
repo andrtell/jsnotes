@@ -15,8 +15,8 @@ Classic scripts can be loaded via the `<script>` tag.
 <script src="z.js"> 
 ```
 ```
-                   ┌── JS download ──┬── JS execution ──┐                  
-└── HTML parsing ──┘                                    └── HTML parsing ──┘
+                   ┌─── get JS ───┐┌─── eval JS  ───┐                  
+──── parse HTML ───┘                                └── parse HTML ───
 ```
 
 ```html
@@ -24,8 +24,8 @@ Classic scripts can be loaded via the `<script>` tag.
 ```
 
 ```
-                          ┌── JS download ──┐           ┌── JS execution ──┐
-└── HTML parsing ───────────────────────────────────────┘ 
+                    ┌─── get JS ───┐                ┌─── eval JS ────
+──── parse HTML ────────────────────────────────────┘ 
 ```
 
 ```html
@@ -33,8 +33,8 @@ Classic scripts can be loaded via the `<script>` tag.
 ```
 
 ```
-                    ┌── JS download ──┬── JS execution ──┐                  
-└── HTML parsing ─────────────────────┘                  └── HTML parsing ──┘
+                    ┌─── get JS ───┬─── eval JS ───┐                  
+─── parse HTML ────────────────────┘               └── parse HTML ───
 ```
 
 _Scope_
