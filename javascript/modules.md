@@ -117,7 +117,9 @@ function f() {}
 export { f };
 ```
 
-Imported bindings are __live__.
+Imported bindings are __live__. 
+
+The value is only retrieved when the imported variable is being used.
 
 ```html
 <script type="module">
@@ -191,6 +193,7 @@ export function b() {};
 export function c() {};
 ```
 
-TODO: circular deps
+An imported variable's value is only retrieved when the variable is used.
+
 
 TODO: import maps
