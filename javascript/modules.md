@@ -53,8 +53,8 @@ is equivalent to:
 
 
 ```html
-<script type="module" async src="z.js"> 
-<script type="module" async src="z.js"> 
+<script type="module" async src="z.js"></script> 
+<script type="module" async src="z.js"></script>
 ```
 
 __NodeJS__
