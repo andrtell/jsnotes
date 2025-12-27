@@ -193,7 +193,25 @@ export function b() {};
 export function c() {};
 ```
 
-An imported variable's value is only retrieved when the variable is used.
+_Import maps_
 
+In the browser _module specifiers_ can be translated using an _import map_.
 
-TODO: import maps
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "shapes": "./shapes/square.js",
+      "shapes/square": "./modules/shapes/square.js",
+      "https://example.com/shapes/square.js": "./shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
+      "../shapes/square": "./shapes/square.js"
+    }
+  }
+</script>
+
+<script type="module">
+  import { draw } from "shapes";
+</script>
+```
+
