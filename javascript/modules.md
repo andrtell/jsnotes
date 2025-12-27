@@ -51,7 +51,7 @@ console.log('b');
 ```
                                    ┌── ./b.js download ──┐
                                    ┌── ./a.js download ──┐
-                          ┌──── JS download (+ deps) ────┐     ┌── a.js eval ──┐┌── b.js eval ──┐┌── top eval ──┐
+                          ┌──── JS download (+ deps) ────┐     ┌── a.js exec ──┐┌── b.js exec ──┐┌── top exec ──┐
 └── HTML parsing ──────────────────────────────────────────────┘
 ```
 ```
