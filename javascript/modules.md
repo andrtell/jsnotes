@@ -61,8 +61,8 @@ Modules can `import` features from other modules.
 
 ```html
 <script type="module">
-    import { x, f } from './a.js';
-    import { y, g } from './b.js';
+    import { x, f } from './a.js'; // named imports
+    import { y, g } from './b.js'; //
     f(x); // console: v = 1
     g(y); // console: w = 2 
 </script>
@@ -83,3 +83,26 @@ function g(w) { console.log('w = ' + w); }
 
 export {y, g};
 ```
+
+A module can have `1`  _default_ export.
+
+```html
+<script type="module">
+    import f from './a.js'; // default import
+    import g from './b.js'; // 
+    f(); // console: hello
+    g(); // console: world
+</script>
+```
+```javascript
+// a.js
+function f() { console.log('hello'); }
+
+export default f;
+```
+
+```javascript
+// b.js
+export default function() { console.log('world'); }
+```
+
