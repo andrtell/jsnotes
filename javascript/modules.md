@@ -105,7 +105,9 @@ Modules are _singeltons_.
 <script type="module">
     import * as X from './a.js';
     import * as Y from './a.js';
-    console.log(X === Y); // ~> true
+    import * as Z from './b.js';
+    X === Y; // => true
+    X === Z; // => false
 </script>
 ```
 
