@@ -63,8 +63,8 @@ Modules can `import` features from other modules.
 <script type="module">
     import { x, f } from './a.js';
     import { y, g } from './b.js';
-    f(x);
-    g(y);
+    f(x); // console: v = 1
+    g(y); // console: w = 2 
 </script>
 ```
 
@@ -77,7 +77,7 @@ export function f(v) { console.log('v = ' + v); }
 
 ```javascript
 // ./b.js
-const y = 1;
+const y = 2;
 
 function g(w) { console.log('w = ' + w); }
 
