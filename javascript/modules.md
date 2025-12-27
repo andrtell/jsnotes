@@ -49,7 +49,7 @@ Modules are loaded and executed once.
 <script type="module" src="z.js"></script>
 ```
 
-is equivalent to:
+(same as)
 
 
 ```html
