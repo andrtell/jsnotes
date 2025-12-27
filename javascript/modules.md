@@ -26,7 +26,7 @@ Top-level names in modules are private to the module (unless exported).
 _Load_
 
 ```html
-<script type="module" src="z.js"> 
+<script type="module" src="z.js"></script> 
 ```
 
 ```
@@ -35,7 +35,7 @@ _Load_
 ```
 
 ```html
-<script type="module" async src="z.js"> 
+<script type="module" async src="z.js"></script>
 ```
 
 ```
@@ -46,7 +46,7 @@ _Load_
 Modules are loaded and executed once.
 
 ```html
-<script type="module" async src="z.js"> 
+<script type="module" async src="z.js"></script>
 ```
 
 is equivalent to:
