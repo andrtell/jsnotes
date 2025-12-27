@@ -16,8 +16,8 @@ Modules can be loaded via the `<script type="module">` tag.
 ```
 
 ```
-                          ┌── JS download (+ deps) ──┐            ┌── JS execution ──┐
-└── HTML parsing ─────────────────────────────────────────────────┘ 
+                          ┌── JS fetch (+ deps) ──┐         ┌──── JS exec ────┐
+└── HTML parsing ───────────────────────────────────────────┘ 
 ```
 
 ```html
@@ -25,8 +25,8 @@ Modules can be loaded via the `<script type="module">` tag.
 ```
 
 ```
-                    ┌── JS download (+ deps) ──┬── JS execution ──┐                  
-└── HTML parsing ──────────────────────────────┘                  └── HTML parsing ──┘
+                     ┌── JS fetch (+ deps) ──┬── JS exec ──┐                  
+└── HTML parsing ────────────────────────────┘             └── HTML parsing ──┘
 ```
 
 Modules can be loaded via the `import` statement.
@@ -49,15 +49,38 @@ console.log('a');
 console.log('b');
 ```
 ```
-                                   ┌── ./b.js download ──┐
-                                   ┌── ./a.js download ──┐
-                          ┌──── JS download (+ deps) ────┐     ┌── a.js exec ──┐┌── b.js exec ──┐┌── top exec ──┐
-└── HTML parsing ──────────────────────────────────────────────┘
+                                 ┌── ./b.js fetch ──┐
+                                 ┌── ./a.js fetch ──┐
+                       ┌──── top fetch (+ deps) ────┐    ┌── a.js exec ──┐┌── b.js exec ──┐┌── top exec ──┐
+└── HTML parsing ────────────────────────────────────────┘
 ```
 ```
 a
 b
 top
+```
+
+Modules can be _dynamically_ loaded via the `import()` function.
+
+```html
+<script type="module">
+import("./a.js").then((m) => {});
+console.log('top');
+</script>
+```
+
+```javascript
+// a.js
+console.log('a');
+```
+```
+                          ┌── top fetch (+ deps) ──┐            ┌── top exec ──┐┌── a.js fetch ──┐┌── a.js exec ──┐
+└── HTML parsing ───────────────────────────────────────────────┘ 
+```
+
+```
+top
+a
 ```
 
 Modules are _evaluated once_.
