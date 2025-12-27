@@ -112,44 +112,42 @@ function f() {}
 export default f;
 ```
 
-An entire module can be imported
+A module can be imported as-is.
 
 ```html
 <script type="module">
-import * as M from "./m.js";
-M.f(); // console: Mmm
+import * as A from "./a.js";
+A.f();
 </script>
-```
-
-```javascript
-// m.js
-export function f() {
-    console.log('Mmm');
-}
-```
-
-Modules can be aggregated by re-exporting features.
-
-```html
-<script type="module">
-import * as Agg from "./agg.js";
-Agg.f(); // console: hello from a
-Agg.g(); // console: hello from b
-</script>
-```
-
-```javascript
-// agg.js
-export * from "./a.js";
-export { g } from "./b.js";
 ```
 
 ```javascript
 // a.js
-export function f() { console.log('hello from a');
+export function f() {}
+```
+
+Modules can re-export aliases.
+
+```html
+<script type="module">
+import * as A from "./a.js";
+A.b();
+A.c();
+</script>
+```
+
+```javascript
+// a.js
+export * from "./b.js";
+export { c } from "./c.js";
 ```
 
 ```javascript
 // b.js
-export function g() { console.log('hello from b');
+export function b() {};
+```
+
+```javascript
+// c.js
+export function c() {};
 ```
