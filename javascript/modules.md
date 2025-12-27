@@ -122,7 +122,7 @@ export function f() {
 }
 ```
 
-Modules can be re-exported (aggregated).
+Modules can be aggregated by re-exporting features.
 
 ```html
 <script type="module">
