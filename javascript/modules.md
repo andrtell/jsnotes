@@ -106,3 +106,17 @@ export default f;
 export default function() { console.log('world'); }
 ```
 
+An entire module can be imported
+
+```html
+<script type="module">
+import * as M from "./m.js";
+M.f(); // console: Mmm
+</script>
+```
+
+```javascript
+// m.js
+export function f() {
+    console.log('Mmm');
+}
