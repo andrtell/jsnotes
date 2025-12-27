@@ -119,7 +119,7 @@ export { f };
 
 Imported bindings are __live__. 
 
-The value is only retrieved when the imported variable is being used.
+The alias `import { n }` below is a __reference__, not a copy of the value.
 
 ```html
 <script type="module">
