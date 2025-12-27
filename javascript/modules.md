@@ -76,19 +76,18 @@ b
 top
 ```
 
-
-Modules are loaded and executed once.
+Modules are _evaluated once_.
 
 ```html
-<script type="module" src="z.js"></script>
+<script type="module">
+    import {} from './a.js';
+    import {} from './a.js';
+    console.log('top');
+</script>
 ```
-
-(same as)
-
-
-```html
-<script type="module" src="z.js"></script> 
-<script type="module" src="z.js"></script>
+```
+a
+top
 ```
 
 _Import_
