@@ -7,14 +7,12 @@ MDN
 
 __Objects__
 
-```html
-<script type="module">
-
+```javascript
 // literal
 let a = { x: 1 };
 
 // constructed
-let b = new Object() // -> {}
+let b = new Object()
 b.x = 1;
 
 // property access
@@ -34,6 +32,14 @@ let c = {
 }
 
 c.ab; // -> 12
+```
 
-</script>
+Shallow copy
+
+```javascript
+let a = { x : 1 }
+
+let b = { y : 2 }
+
+Object.assign({}, a , b) // -> { x: 1, y : 2 }
 ```
