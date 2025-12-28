@@ -34,6 +34,12 @@ __This__
   };
 
   b.h(); // => { name: "b", h: f() }
+
+  function g(f) {
+    return f();
+  }
+
+  g(f); // -> undefined (call-site: f())
 </script>
 ```
 
