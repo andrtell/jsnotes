@@ -26,7 +26,7 @@ a["x"];
 // bad name
 a.z; // -> undefined
 
-// computed property names
+// computed name
 let c = {
   ["a" + "b"]: 12
 }
