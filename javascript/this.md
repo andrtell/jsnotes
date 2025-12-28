@@ -9,18 +9,23 @@ __This__
 
 ```html
 <script type="module">
-  function f() {
-    return this;
-  }
-  f(); // => undefined (cuz strict-mode)
+  function f() { return this; }
+
+  f(); // => undefined (strict-mode)
 </script>
 ```
 
 ```html
 <script type="module">
-  function f() {
-    return this;
-  }
+  // ...
   f.call(7); // => 7
 </script>
 ```
+```html
+<script type="module">
+  // ...
+  let obj = { f: f }
+  obj.f(); // => { f: f }
+</script>
+```
+
