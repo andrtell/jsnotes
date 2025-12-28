@@ -23,6 +23,9 @@ a.x;
 // key access
 a["x"];
 
+// property missing
+a.z; // -> undefined
+
 // keys are always strings
 a[7] = 9;
 
