@@ -23,7 +23,7 @@ a.x;
 // key access
 a["x"];
 
-// property missing
+// bad name
 a.z; // -> undefined
 
 // computed property names
