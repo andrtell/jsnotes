@@ -23,4 +23,4 @@ __Notes__
 
 [Modules](./javascript/modules.md) 
 
-[this](./javscripts/this.md)
+[this](./javascript/this.md)
