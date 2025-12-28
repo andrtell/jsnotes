@@ -5,7 +5,7 @@ __Links__
 MDN
 > [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-__Javascript__
+__Objects__
 
 ```html
 <script type="module">
@@ -25,22 +25,15 @@ a["x"];
 
 // keys are always strings
 a[7] = 9;
+
 a["7"]; // -> 9
 
+// computed property names
+let c = {
+  ["a" + "b"]: 12
+}
 
-
-
-
-typeof {} // -> "object"
-
-let s = "abc";
-
-typeof s; // -> "string"
-
-typeof String(s); // -> "object"
-
-s.length; // -> 3, s coerced into: new String(s)
-
-
+c.ab; // -> 12
 
 </script>
+```
