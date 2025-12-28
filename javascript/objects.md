@@ -14,10 +14,20 @@ __Javascript__
 let a = { x: 1 } 
 
 // constructed
-let b = new Object()
+let b = new Object() // -> {}
 b.x = 1
 
 typeof {} // -> "object"
+
+typeof [] // -> "object"
+
+let s = "abc";
+
+typeof s; // -> "string"
+
+typeof String(s); // -> "object"
+
+s.length; // -> 3, s coerced into: new String(s)
 
 
 
