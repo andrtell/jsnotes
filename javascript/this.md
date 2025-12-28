@@ -39,7 +39,7 @@ __This__
     return f();
   }
 
-  g(f); // -> undefined (call-site: f())
+  g(f); // -> undefined, at call-site: f()
 
   let h = f.bind(7);
 
