@@ -40,6 +40,12 @@ __This__
   }
 
   g(f); // -> undefined (call-site: f())
+
+  let h = f.bind(7);
+
+  h(); // -> 7
+
+
 </script>
 ```
 
