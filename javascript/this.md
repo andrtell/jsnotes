@@ -45,6 +45,15 @@ __This__
 
   h(); // -> 7
 
+  let j = () => this;
+
+  j(); // -> undefined
+
+  function k() {
+    return (() => this)();
+  }
+
+  k.call(7); // -> 7
 
 </script>
 ```
