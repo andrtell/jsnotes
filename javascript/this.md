@@ -15,12 +15,23 @@ __This__
 
   f.call(7) // -> 7
 
-  let obj = { f: f };
-  obj.f(); // -> { f: f }
+  let a = {
+    name: "a",
+    g: f
+  };
 
-  let g = f;
+  a.g(); // -> { name: "a", g: f() }
 
-  g(); // -> undefined
+  let z = a.g;
+
+  z(); // -> undefined
+
+  let b = {
+    name: "b",
+    h: a.g
+  };
+
+  b.h(); // => { name: "b", h: f() }
 </script>
 ```
 
