@@ -15,3 +15,12 @@ __This__
   f(); // => undefined
 </script>
 ```
+
+```html
+<script type="module">
+  function f() {
+    return this;
+  }
+  f.call(7); // => 7
+</script>
+```
