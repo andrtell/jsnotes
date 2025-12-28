@@ -18,6 +18,9 @@ __This__
   let obj = { f: f };
   obj.f(); // -> { f: f }
 
+  let g = f;
+
+  g(); // -> undefined
 </script>
 ```
 
