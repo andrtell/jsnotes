@@ -35,7 +35,7 @@ a["x"];
 
 a.z; // -> undefined
 
-// existance
+// property exists?
 
 ("z" in a); // -> false (+ proto ancestors)
 
