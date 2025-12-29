@@ -31,13 +31,11 @@ a.x;
 
 a["x"];
 
-// bad name
+// exists?
 
 a.z; // -> undefined
 
-// property exists?
-
-("z" in a); // -> false (+ proto ancestors)
+("z" in a); // -> false (+ proto-chain)
 
 z.hasOwnProperty("z"); // -> false.
 
