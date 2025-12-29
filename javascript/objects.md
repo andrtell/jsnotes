@@ -35,6 +35,12 @@ a["x"];
 
 a.z; // -> undefined
 
+// existance
+
+("z" in a); // -> false (+ proto ancestors)
+
+z.hasOwnProperty("z"); // -> false.
+
 // computed name
 
 let c = {
