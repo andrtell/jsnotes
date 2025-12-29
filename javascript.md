@@ -26,3 +26,5 @@ __Notes__
 [this](./javascript/this.md)
 
 [Objects](./javascript/objects.md)
+
+[Prototype](./javascript/prototype.md)
