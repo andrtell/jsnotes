@@ -58,7 +58,7 @@ Built in iterators.
 String, Array, TypedArray, Map, Set, and Segments ...
 ```
 
-Generator functions returns an iterator.
+Generator functions returns a Generator (which is an Iterator).
 
 ```javascript
 let a = {
