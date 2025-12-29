@@ -69,6 +69,19 @@ e.top = 3
 e.peek; // -> 3
 ```
 
+Iteration.
+
+```javascript
+let f = {x: 1, y: 2};
+let v = [];
+
+for (let k in f) {   // iterates over enumerable properties
+  v.push(f[k]);
+}
+
+v; // -> [1, 2];
+```
+
 Shallow copy.
 
 ```javascript
