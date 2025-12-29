@@ -33,6 +33,8 @@ a.isPrototypeOf(b); // -> true
                          └─ [[prototype]] ──> Object.prototype
 ```
 
+Function variant.
+
 ```javascript
 
 function C() {
@@ -60,6 +62,8 @@ C.prototype.isPrototypeOf(d); // -> true
     └─ [[prototype]] ──> C.prototype
                            └─ [[prototype]] ──> Object.prototype
 ```
+
+Class variant.
 
 ```javascript
 class E {
