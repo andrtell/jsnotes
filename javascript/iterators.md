@@ -13,15 +13,19 @@ MDN
 let a = {
   times: 3,
 
-  next() {
-    if (this.times--) {
-      return {value: 7, done: false};
+  // Iterator protocol
+
+  next() { 
+    if (this.times > 0) {
+      return {value: this.times--, done: false};
     }
     return {done: true};
   },
+  
+  // Iterable
 
   [Symbol.iterator]() {
-    return this; // iterate once.
+    return this;
   }
 }
 
@@ -31,5 +35,5 @@ for (const x of a) {
   v.push(x)
 }
 
-v; // -> [7, 7, 7]
+v; // -> [3, 2, 1]
 ```
