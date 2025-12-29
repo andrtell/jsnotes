@@ -7,7 +7,14 @@ MDN
 
 __Prototype__
 
-javascript```
+```javascript
 
+let a = {x: 1};l
+
+let b = Object.create(a);
+
+b.x; // -> 1
+
+(x in b); // -> true
 
 ```
