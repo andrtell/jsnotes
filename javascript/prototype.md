@@ -9,12 +9,14 @@ __Prototype__
 
 ```javascript
 
-let a = {x: 1};l
+let a = { x: 1 };
 
 let b = Object.create(a);
 
 b.x; // -> 1
 
-(x in b); // -> true
+Object.getPrototypeOf(b) == a; // -> true
+
+Object.getPrototypeOf(a) == Object.prototype; // -> true
 
 ```
