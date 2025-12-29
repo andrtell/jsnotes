@@ -13,16 +13,14 @@ let a = { x: 1 };
 
 let b = Object.create(a);
 
+Object.getPrototypeOf(b) === a; // -> true
+
 b.x; // -> 1
-
-Object.getPrototypeOf(b) == a; // -> true
-
-Object.getPrototypeOf(a) == Object.prototype; // -> true
-
 ```
 
 ```
 ──> b
     └─ [[prototype]] ──> a
+                         ├─ x: 1
                          └─ [[prototype]] ──> Object.prototype
 ```
