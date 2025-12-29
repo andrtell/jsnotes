@@ -20,3 +20,7 @@ Object.getPrototypeOf(b) == a; // -> true
 Object.getPrototypeOf(a) == Object.prototype; // -> true
 
 ```
+
+```
+
+```
