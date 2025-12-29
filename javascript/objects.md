@@ -13,7 +13,7 @@ MDN
 
 __Objects__
 
-Create
+Create.
 
 ```javascript
 // literal
@@ -24,7 +24,7 @@ let b = new Object();
 b.x = 1;
 ```
 
-Properties
+Properties.
 
 ```javascript
 let c = {
@@ -52,9 +52,7 @@ d.hasOwnProperty("z"); // -> false.
 Getters and setters.
 
 ```javascript
-// getters & setters
-
-let d = {
+let e = {
   q: [1, 2],
 
   get peek() {
@@ -66,14 +64,12 @@ let d = {
   },
 };
 
-d.peek; // -> 2
-
-d.top = 3
-
-d.peek; // -> 3
+e.peek; // -> 2
+e.top = 3
+e.peek; // -> 3
 ```
 
-Shallow copy
+Shallow copy.
 
 ```javascript
 let a = { x : 1 }
@@ -85,7 +81,7 @@ let b = { y : 2 }
 Object.assign({}, a , b)
 ```
 
-Deep copy
+Deep copy.
 
 ```javascript
 let a = { x : 1 };
