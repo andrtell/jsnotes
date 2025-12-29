@@ -22,6 +22,8 @@ b.x; // -> 1
 b.hasOwnProperty("x"); // -> false
 
 ("x" in b); // -> true
+
+a.isPrototypeOf(b); // -> true
 ```
 
 ```
@@ -41,13 +43,15 @@ let d = new C(); // constructor call with new.
 
 Object.getPrototypeOf(d) === C.prototype; // -> true
 
+(d instanceof C); // -> true, since C.prototype is in the proto-chain of d.
+
 d.y; // -> 1
 
 d.hasOwnProperty("y"); // -> true
 
 ("y" in d); // -> true
 
-(d instanceof C); // -> true, since C.prototype is in the proto-chain of d.
+C.prototype.isPrototypeOf(d); // -> true
 ```
 
 ```
