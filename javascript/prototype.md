@@ -30,3 +30,29 @@ b.hasOwnProperty("x"); // -> false
                          ├─ x: 1
                          └─ [[prototype]] ──> Object.prototype
 ```
+
+```javascript
+
+function C() {
+    this.y = 1;
+} 
+
+let d = new C();
+
+Object.getPrototypeOf(d) === C.prototype; // -> true
+
+d.y; // -> 1
+
+b.hasOwnProperty("y"); // -> true
+
+("y" in d); // -> true
+```
+
+```
+──> d
+    ├─ y: 1
+    └─ [[prototype]] ──> C.prototype
+                           └─ [[prototype]] ──> Object.prototype
+```
+
+
