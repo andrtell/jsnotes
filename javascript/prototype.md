@@ -7,6 +7,8 @@ MDN
 
 __Prototype__
 
+_"There are ONLY objects"_
+
 ```javascript
 
 let a = { x: 1 };
