@@ -16,6 +16,10 @@ let b = Object.create(a);
 Object.getPrototypeOf(b) === a; // -> true
 
 b.x; // -> 1
+
+b.hasOwnProperty("x"); // -> false
+
+("x" in b); // -> true
 ```
 
 ```
