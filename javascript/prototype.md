@@ -46,6 +46,8 @@ d.y; // -> 1
 d.hasOwnProperty("y"); // -> true
 
 ("y" in d); // -> true
+
+(d instanceof C); // -> true, since C.prototype is in the proto-chain of d.
 ```
 
 ```
