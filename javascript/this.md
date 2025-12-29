@@ -60,6 +60,13 @@ MDN
 
   new C(); // -> { x: 1 }, constructor call.
 
+  class D {
+    constructor() {
+      this.x = 1;
+    }
+  }
+
+  new D(); // -> { x: 1 }
 </script>
 ```
 
