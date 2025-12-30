@@ -35,7 +35,7 @@ NodeJS
 Browser
 > [Classic scripts](./javascript/browser/classic_scripts.md) 
 
-Javascript
+Language
 
 > [Modules](./javascript/modules.md) 
 | ["use strict"](./javascript/use_strict.md)
