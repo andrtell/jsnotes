@@ -6,12 +6,16 @@ __Links__
 
 # NPM
 
+`init`
+
 ```sh
 $ npm init -y
 
 $ ls
 package.json
 ```
+
+`install`
 
 ```sh
 $ npm install express
@@ -48,10 +52,14 @@ $ ls
 node_modules/ package.json package-lock.json
 ```
 
+`update`
+
 ```sh
 $ npm update
 up to date, audited 149 packages in 2s
 ```
+
+`run`
 
 ```sh
 $ npm run greet
