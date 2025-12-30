@@ -38,7 +38,7 @@ Browser
 Javascript
 
 > [Modules](./javascript/modules.md) 
-| ["use strict"](./javascript/strict_mode.md)
+| ["use strict"](./javascript/use_strict.md)
 
 > [Objects](./javascript/objects.md)
 | [Prototypes](./javascript/prototype.md)
