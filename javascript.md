@@ -27,7 +27,7 @@ __Notes__
 
 > [Modules](./javascript/modules.md) 
 | [Classic scripts](./javascript/classic_scripts.md) 
-| ["strict mode"](./javascript/strict_mode.md)
+| ["use strict"](./javascript/strict_mode.md)
 
 > [Objects](./javascript/objects.md)
 | [Prototypes](./javascript/prototype.md)
