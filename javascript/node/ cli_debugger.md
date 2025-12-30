@@ -1,4 +1,4 @@
-[Top](../debug.md)
+[Top](../../javascript.md)
 
 
 # CLI Debugger
