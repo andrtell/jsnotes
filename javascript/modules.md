@@ -7,7 +7,7 @@ MDN
 
 __Notes__
 
-[Classic scripts](./classic_scripts.md)
+[Classic scripts](./browser/classic_scripts.md)
 
 # Modules
 
