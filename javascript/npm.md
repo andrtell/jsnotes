@@ -6,12 +6,14 @@ __Links__
 
 # NPM
 
-```bash
+```sh
 $ npm init -y
 
 $ ls
 package.json
+```
 
+```sh
 $ npm install express
 
 $ ls
@@ -23,7 +25,9 @@ $ cat package.json
         "express": "^5.2.1"
     }
 }
+```
 
+```sh
 $ npm install -D eslint
 
 $ cat package.json
@@ -32,7 +36,9 @@ $ cat package.json
     "eslint": "^9.39.2"
   }
 }
+```
 
+```sh
 $ rm -rf node_modules
 
 $ ls
@@ -43,10 +49,14 @@ added 148 packages, and audited 149 packages in 560ms
 
 $ ls
 node_modules/ package.json package-lock.json
+```
 
+```sh
 $ npm update
 up to date, audited 149 packages in 2s
+```
 
+```sh
 $ npm run greet
 npm error Missing script: "greet"
 
