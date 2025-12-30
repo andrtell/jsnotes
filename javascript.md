@@ -24,6 +24,7 @@ V8
 __Notes__
 
 > [Install NodeJS](./javascript/install_nodejs.md)
+| [NPM](./javascript/npm.md)
 
 > [Modules](./javascript/modules.md) 
 | [Classic scripts](./javascript/classic_scripts.md) 
