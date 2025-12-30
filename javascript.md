@@ -23,10 +23,14 @@ NodeJS
 V8
 > [V8](https://v8.dev/)
 
-__Notes__
+# Javascript
+
+NodeJS
 
 > [Install NodeJS](./javascript/install_nodejs.md)
 | [NPM](./javascript/npm.md)
+
+Javascript
 
 > [Modules](./javascript/modules.md) 
 | [Classic scripts](./javascript/classic_scripts.md) 
