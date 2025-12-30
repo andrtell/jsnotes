@@ -66,6 +66,13 @@ Watchers:
 debug> unwatch("x")
 ```
 
+`exec`
+
+```sh
+debug> exec("x + 1")
+3
+```
+
 `restart`
 
 ```sh
