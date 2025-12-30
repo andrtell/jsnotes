@@ -39,10 +39,7 @@ $ cat package.json
 ```
 
 ```sh
-$ rm -rf node_modules
-
-$ ls
-package.json package-lock.json
+$ rm -rf node_modules/
 
 $ npm install
 added 148 packages, and audited 149 packages in 560ms
