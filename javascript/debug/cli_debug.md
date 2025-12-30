@@ -18,21 +18,42 @@ $ node inspect a.js
 > 1 let x = 1
   2
   3 x = x + 1;
+```
 
-debug> n
+`next`
 
-  1 let x = 1
+```sh
+debug> next
+
+  1 let x = 1;
   2
 > 3 x = x + 1;
   4
   5 console.log(x);
+```
 
+`list`
+
+```sh
+debug> list()
+
+  1 let x = 1;
+  2
+> 3 x = x + 1;
+  4
+  5 console.log(x);
+  6
+```
+
+`watch`, `unwatch`, `watchers`
+
+```sh
 debug> watch("x")
 
 debug> watchers
   0: x = 1
 
-debug> n
+debug> next
 
 Watchers:
   0: x = 2
@@ -42,6 +63,43 @@ Watchers:
 > 5 console.log(x);
   6
 
+debug> unwatch("x")
+```
+
+`restart`
+
+```sh
+debug> restart
+
+> 1 let x = 1;
+  2
+  3 x = x + 1;
+```
+
+`cont`, `setBreakpoint`, `clearBreakpoint`, `breakpoints`
+
+```sh
+debug> setBreakpoint('a.js', 5)
+
+debug> breakpoints
+#0 a.js:5
+
+debug> cont
+
+  3 x = x + 1;
+  4
+> 5 console.log(x);
+  6
+
+debug> clearBreakpoint('a.js', 5)
+
+debug> breakpoints
+No breakpoints yet
+```
+
+`.exit`
+
+```sh
 debug> .exit
 ```
 
