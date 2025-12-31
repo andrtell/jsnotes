@@ -29,33 +29,33 @@ a = Array.of(1, 3, 7);
 ```javascript
 let b = [];
 
-b.length; // -> 0
+b.length; // 0
 
 b.length = 3;
 
-b; // -> [<3 empty items>]
+b; // [<3 empty items>]
 
 b[1] = 7; 
 
-b; // -> [ <1 empty item>, 7, <1 empty item> ]
+b; // [ <1 empty item>, 7, <1 empty item> ]
 
 b.length = 0;
 
-b; // -> []
+b; // []
 
 b[2] = 7;
 
-b; // -> [ <2 empty items>, 7]
+b; // [ <2 empty items>, 7]
 
 b = [,,7];
 
-b; // -> [ <2 empty items>, 7]
+b; // [ <2 empty items>, 7]
 
 delete b[2];
 
-b; // -> [ <3 empty items> ]
+b; // [ <3 empty items> ]
 
-b[0]; // -> undefined
+b[0]; // undefined
 ```
 
 `for`
