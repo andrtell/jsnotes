@@ -110,6 +110,20 @@ delete b[1]; // b is [1, <1 empty item>, 3]
 b[1]; // undefined
 ```
 
+Combine
+
+`.concat()`
+
+```javascript
+let x = [1, 2], y = [3, 4];
+
+x.concat(y); // [1, 2, 3, 4]
+
+x; // [1, 2]
+y; // [3, 4]
+
+```
+
 Mutate
 
 `.pop()`, `.push()`, `.shift()`, `.unshift()`
@@ -189,20 +203,6 @@ u.toReversed(); // [1, 2, 3]
 u; // [3, 2, 1]
 ```
 
-Combine
-
-`.concat()`
-
-```javascript
-let x = [1, 2], y = [3, 4];
-
-x.concat(y); // [1, 2, 3, 4]
-
-x; // [1, 2]
-y; // [3, 4]
-
-```
-
 Transform
 
 `.with()`
@@ -211,6 +211,58 @@ Transform
 let w = ['a', 'b', 'c'];
 
 w.with(1, 'X'); // ['a', 'X', 'c'];
+```
+
+`.map()`
+
+```javascript
+let f = [1,,3]; // [1, <1 empty item>, 3]
+
+f.map((val, _idx, _f) => val, _this); //  [1, <1 empty item>, 3]
+```
+
+`.reduce()`, `.reduceRight()`
+
+```javascript
+let h = [1,,3]; // [1, <1 empty item>, 3]
+
+h.reduce((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [1, 3]
+
+h.reduceRight((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [3, 1]
+
+h.reduce((acc, val) => acc + val); // 4 (1 + 3)
+```
+
+`.flat()`
+
+```javascript
+let w = [1, [2, [3, 4]];
+
+w.flat(); // [1, 2, [3, 4]]
+
+w.flat(2); // [1, 2, 3, 4] 
+
+w.flat(Infinity); // [1, 2, 3, 4]
+```
+
+`.flatMap()`
+
+```javascript
+let v = [1, [2, [3, 4]]];
+
+v.flatMap((val, _idx, _v) => val * 11, _this);  // [11, NaN]
+
+// eq. to .map().flat()
+```
+
+Select
+
+`.filter()`
+
+```javascript
+let g = [1,,3]; // [1, <1 empty item>, 3]
+
+g.filter((val, _idx, _g) => true, _this); // -> [1, 3]
 ```
 
 `.slice()`
@@ -229,56 +281,6 @@ z.slice(-2); // ['c', 'd']
 z.slice(2, -1); // ['c'], non-inclusive end
 
 z; // ['a', 'b', 'c', 'd']
-```
-
-`.flat()`
-
-```javascript
-let w = [1, [2, [3, 4]];
-
-w.flat(); // [1, 2, [3, 4]]
-
-w.flat(2); // [1, 2, 3, 4] 
-
-w.flat(Infinity); // [1, 2, 3, 4]
-```
-
-`.map()`
-
-```javascript
-let f = [1,,3]; // [1, <1 empty item>, 3]
-
-f.map((val, _idx, _f) => val, _this); //  [1, <1 empty item>, 3]
-```
-
-`.flatMap()`
-
-```javascript
-let v = [1, [2, [3, 4]]];
-
-v.flatMap((val, _idx, _v) => val * 11, _this);  // [11, NaN]
-
-// eq. to .map().flat()
-```
-
-`.filter()`
-
-```javascript
-let g = [1,,3]; // [1, <1 empty item>, 3]
-
-g.filter((val, _idx, _g) => true, _this); // -> [1, 3]
-```
-
-`.reduce()`, `.reduceRight()`
-
-```javascript
-let h = [1,,3]; // [1, <1 empty item>, 3]
-
-h.reduce((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [1, 3]
-
-h.reduceRight((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [3, 1]
-
-h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```
 
 Test
