@@ -66,6 +66,40 @@ b; // [ <3 empty items> ]
 b[0]; // undefined
 ```
 
+`.pop`, `.push`, `.shift`, `.unshift`
+
+```.javascript
+let z = [1, 3, 7, 11];
+
+z.pop(); // 11
+
+z; // [1, 3, 7]
+
+z.push(11); // 4 = new .length
+
+z; // [1, 3, 7, 11]
+
+z.shift(); // 1
+
+z; // [3, 7 ,11]
+
+z.unshift(1); // 4 = new .length
+
+z; // [1, 3, 7, 11]
+```
+
+`.concat`
+
+```javascript
+let x = [1, 2], y = [3, 4];
+
+x.concat(y); // [1, 2, 3, 4]
+
+x; // [1, 2]
+y; // [3, 4]
+
+```
+
 `for`
 
 
@@ -127,6 +161,16 @@ let h = [1,,3]; // [1, <1 empty item>, 3]
 h.reduce((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [1, 3]
 
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
+```
+
+`.includes`
+
+```javascript
+let z = [1,,7, 11, 13]; // [1, <1 empty item>, 3, 7 , 11]
+
+z.includes(7); // true
+
+z.includes(7, 3); // false
 ```
 
 `.some`
