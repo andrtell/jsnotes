@@ -137,6 +137,22 @@ e.forEach((val, _idx, _e) => {
 v; // [1, 3]
 ```
 
+`.sort`, `.toSorted`
+
+```javascript
+let z = [3, 11, 7, 1];
+
+z.sort(); // z
+
+z; // [1, 3, 7 ,11]
+
+let y = [3, 11, 7, 1];
+
+y.toSorted(); // [1, 3, 7, 11]
+
+y; // [3, 11, 7, 1]
+```
+
 `.map`
 
 ```javascript
@@ -153,12 +169,14 @@ let g = [1,,3]; // [1, <1 empty item>, 3]
 g.filter((val, _idx, _g) => true, _this); // -> [1, 3]
 ```
 
-`.reduce`
+`.reduce`, `.reduceRight`
 
 ```javascript
 let h = [1,,3]; // [1, <1 empty item>, 3]
 
 h.reduce((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [1, 3]
+
+h.reduceRight((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [3, 1]
 
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```
