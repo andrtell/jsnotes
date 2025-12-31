@@ -17,6 +17,8 @@ __Notes__
 
 [Iterators](./iterators.md)
 
+[Arrays](./arrays.md)
+
 # Objects
 
 Create.
