@@ -62,39 +62,37 @@ b[0]; // undefined
 
 
 ```javascript
-let v = [], c = [1,,3];
+let v = [], c = [1,,3]; // [1, <1 empty item>, 3] 
 
 for (let i = 0; i < c.length; i++) {
     v.push(c[i]);
 }
 
-v; // -> [1, undefined, 3];
+v; // [1, undefined, 3];
 ```
 
 `for .. of`
 
 ```javascript
-let d = [1,,3];
-
-v = [];
+let v = [], d = [1,,3]; // [1, <1 empty item>, 3]
 
 for (const val of c) {
     v.push(val);    
 }
 
-v; // -> [1, undefined, 3];
+v; // [1, undefined, 3];
 ```
 
 `.forEach`
 
 ```javascript
-v = [];
+let v = [], e = [1,,3]; // [1, <1 empty item>, 3]
 
-c.forEach((val, idx, c) => {
+e.forEach((val, idx, c) => {
     v.push(val);
 });
 
-v; // -> [1, 3]
+v; // [1, 3]
 ```
 
 Transform
