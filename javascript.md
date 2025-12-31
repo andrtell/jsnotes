@@ -22,6 +22,8 @@ Language
 | [Prototypes](./javascript/prototype.md)
 | [This](./javascript/this.md)
 
+> [Arrays](./javascript/arrays.md)
+
 > [Iterators](./javascript/iterators.md)
 
 ## __Links__
