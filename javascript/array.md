@@ -241,7 +241,7 @@ f.map((val, _idx, _f) => val, _this); //  [1, <1 empty item>, 3]
 `.flatMap()`
 
 ```javascript
-let v = [1, [2, [3, 4]]]; // [1, <1 empty item>, 3]
+let v = [1, [2, [3, 4]]];
 
 v.flatMap((val, _idx, _v) => val * 11, _this);  // [11, NaN]
 ```
