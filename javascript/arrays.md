@@ -7,6 +7,8 @@ MDN
 
 # Arrays
 
+Create
+
 `[]`, `Array`, `.of()`
 
 ```javascript
@@ -22,6 +24,8 @@ a = [1, 3, 7];
 
 a = Array.of(1, 3, 7); // [1, 3, 7]
 ```
+
+Access
 
 `[]`, `.at()`
 
@@ -39,6 +43,8 @@ a.at(-1); // 7
 a.at(99); // undefined
 
 ```
+
+Iterate
 
 `for`
 
@@ -76,6 +82,8 @@ e.forEach((val, _idx, _e) => {
 v; // [1, 3]
 ```
 
+Length
+
 `.length`
 
 ```javascript
@@ -102,6 +110,8 @@ delete b[1]; // b is [1, <1 empty item>, 3]
 b[1]; // undefined
 ```
 
+Mutate
+
 `.pop()`, `.push()`, `.shift()`, `.unshift()`
 
 ```.javascript
@@ -123,45 +133,6 @@ z.unshift(1); // 4 ~ .length
 
 z; // [1, 3, 7, 11]
 ```
-
-`.concat()`
-
-```javascript
-let x = [1, 2], y = [3, 4];
-
-x.concat(y); // [1, 2, 3, 4]
-
-x; // [1, 2]
-y; // [3, 4]
-
-```
-
-`.with()`
-
-```javascript
-let w = ['a', 'b', 'c'];
-
-w.with(1, 'X'); // ['a', 'X', 'c'];
-```
-
-`.slice()`
-
-```javascript
-let z = ['a', 'b', 'c', 'd'];
-
-z.slice(); // ['a', 'b', 'c', 'd']
-
-z.slice(2); // ['c', 'd']
-
-z.slice(2, 3); // ['c'], non-inclusive end 
-
-z.slice(-2); // ['c', 'd']
-
-z.slice(2, -1); // ['c'], non-inclusive end
-
-z; // ['a', 'b', 'c', 'd']
-```
-
 `.splice()`, `.toSpliced()`
 
 ```javascript
@@ -218,6 +189,48 @@ u.toReversed(); // [1, 2, 3]
 u; // [3, 2, 1]
 ```
 
+Combine
+
+`.concat()`
+
+```javascript
+let x = [1, 2], y = [3, 4];
+
+x.concat(y); // [1, 2, 3, 4]
+
+x; // [1, 2]
+y; // [3, 4]
+
+```
+
+Transform
+
+`.with()`
+
+```javascript
+let w = ['a', 'b', 'c'];
+
+w.with(1, 'X'); // ['a', 'X', 'c'];
+```
+
+`.slice()`
+
+```javascript
+let z = ['a', 'b', 'c', 'd'];
+
+z.slice(); // ['a', 'b', 'c', 'd']
+
+z.slice(2); // ['c', 'd']
+
+z.slice(2, 3); // ['c'], non-inclusive end 
+
+z.slice(-2); // ['c', 'd']
+
+z.slice(2, -1); // ['c'], non-inclusive end
+
+z; // ['a', 'b', 'c', 'd']
+```
+
 `.flat()`
 
 ```javascript
@@ -268,6 +281,8 @@ h.reduceRight((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [3,
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```
 
+Test
+
 `.includes()`
 
 ```javascript
@@ -293,6 +308,8 @@ let j = [1,,3]; // [1, <1 empty item>, 3]
 
 j.every((val, _idx, _j) => val == 3, _this); // false 
 ```
+
+Search
 
 `.indexOf()`, `.lastIndexOf()`
 
