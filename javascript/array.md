@@ -12,15 +12,15 @@ MDN
 ```javascript
 let a = [];
 
-a = new Array();
+a = new Array(); // []
 
-a = Array();
+a = Array(); // []
 
-a = Array.of();
+a = Array.of(); // []
 
 a = [1, 3, 7];
 
-a = Array.of(1, 3, 7);
+a = Array.of(1, 3, 7); // [1, 3, y]
 
 a[0]; // 1
 
