@@ -92,6 +92,33 @@ y; // [3, 4]
 
 ```
 
+`.splice`, `.toSpliced`
+
+
+```javascript
+let y = ['a', 'b', 'c'];
+
+y.splice(1, 0, 'x'); // [], no deleted elements
+
+y; // ['a', 'x', 'b', 'c']
+
+y.splice(1, 1, 'z'); // ['x']
+
+y; // ['a', 'z', 'b', 'c']
+
+y.splice(1, 1, 'm', 'n'); // ['z']
+
+y; // ['a', 'm', 'n', 'b', 'c']
+
+y.splice(1, 2); // ['m', 'n']
+
+y; // ['a', 'b', 'c']
+
+y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd'] 
+
+y; // ['a', 'b', 'c']
+```
+
 `for`
 
 ```javascript
