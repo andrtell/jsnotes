@@ -95,28 +95,46 @@ e.forEach((val, idx, c) => {
 v; // [1, 3]
 ```
 
-Transform
+`.map`
 
 ```javascript
-let d = [1,,3];
+let f = [1,,3]; // [1, <1 empty item>, 3]
 
-d.map((val, idx, d) => val, this); // -> [1, <1 empty item>, 3]
-
-d.filter((val, idx, d) => true, this); // -> [1, 3]
-
-d.reduce((acc, val, idx, d) => { acc.push(val); return acc }, []); // -> [1, 3]
-
-d.reduce((acc, val) => acc + val); // -> 4 (1 + 3)
+f.map((val, idx, d) => val, this); //  [1, <1 empty item>, 3]
 ```
 
-Test
+`.filter`
 
 ```javascript
-let e = [1,,3];
+let g = [1,,3]; // [1, <1 empty item>, 3]
 
-e.some((val, idx, e) => val == 3, this); // -> true 
+g.filter((val, idx, d) => true, this); // -> [1, 3]
+```
 
-e.every((val, idx, e) => val == 3, this); // -> false 
+`.reduce`
+
+```javascript
+let h = [1,,3]; // [1, <1 empty item>, 3]
+
+h.reduce((acc, val, idx, d) => { acc.push(val); return acc }, []); // [1, 3]
+
+h.reduce((acc, val) => acc + val); // 4 (1 + 3)
+```
+
+`.some`
+
+```javascript
+let i = [1,,3]; // [1, <1 empty item>, 3]
+
+i.some((val, idx, e) => val == 3, this); // true 
+```
+
+`.every`
+
+```javascript
+let j = [1,,3]; // [1, <1 empty item>, 3]
+
+j.every((val, idx, e) => val == 3, this); // false 
 ```
 
 Search
