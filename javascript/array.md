@@ -76,7 +76,7 @@ v; // [1, undefined, 3];
 ```javascript
 let v = [], d = [1,,3]; // [1, <1 empty item>, 3]
 
-for (const val of c) {
+for (const val of d) {
     v.push(val);    
 }
 
@@ -88,7 +88,7 @@ v; // [1, undefined, 3];
 ```javascript
 let v = [], e = [1,,3]; // [1, <1 empty item>, 3]
 
-e.forEach((val, idx, c) => {
+e.forEach((val, _idx, _e) => {
     v.push(val);
 });
 
@@ -100,7 +100,7 @@ v; // [1, 3]
 ```javascript
 let f = [1,,3]; // [1, <1 empty item>, 3]
 
-f.map((val, idx, d) => val, this); //  [1, <1 empty item>, 3]
+f.map((val, _idx, _f) => val, this); //  [1, <1 empty item>, 3]
 ```
 
 `.filter`
@@ -108,7 +108,7 @@ f.map((val, idx, d) => val, this); //  [1, <1 empty item>, 3]
 ```javascript
 let g = [1,,3]; // [1, <1 empty item>, 3]
 
-g.filter((val, idx, d) => true, this); // -> [1, 3]
+g.filter((val, _idx, _g) => true, this); // -> [1, 3]
 ```
 
 `.reduce`
@@ -116,7 +116,7 @@ g.filter((val, idx, d) => true, this); // -> [1, 3]
 ```javascript
 let h = [1,,3]; // [1, <1 empty item>, 3]
 
-h.reduce((acc, val, idx, d) => { acc.push(val); return acc }, []); // [1, 3]
+h.reduce((acc, val, idx, h) => { acc.push(val); return acc }, []); // [1, 3]
 
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```
