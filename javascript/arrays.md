@@ -147,7 +147,8 @@ z.unshift(1); // 4 ~ .length
 
 z; // [1, 3, 7, 11]
 ```
-`.splice()`, `.toSpliced()`
+
+`.splice()`
 
 ```javascript
 let y = ['a', 'b', 'c'];
@@ -165,10 +166,6 @@ y.splice(1, 1, 'm', 'n'); // ['z']
 y; // ['a', 'm', 'n', 'b', 'c']
 
 y.splice(1, 2); // ['m', 'n']
-
-y; // ['a', 'b', 'c']
-
-y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd'] 
 
 y; // ['a', 'b', 'c']
 ```
@@ -231,6 +228,15 @@ h.reduce((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [1, 3]
 h.reduceRight((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [3, 1]
 
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
+```
+
+`.toSpliced()`
+
+```javascript
+// immutable version of .splice()
+let y = ['a', 'b', 'c'];
+
+y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd'] 
 ```
 
 `.flat()`
