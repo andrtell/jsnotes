@@ -49,9 +49,13 @@ b[2] = 7; // b is [ <2 empty items>, 7]
 
 b = [,,7]; // b is [ <2 empty items>, 7]
 
-delete b[2]; // b is [ <3 empty items> ]
+delete b[2]; // b is [ <3 empty items> ] 
 
-b[0]; // undefined
+b = [1, 2, 3]
+
+delete b[1]; // b is [1, <1 empty item>, 3]
+
+b[1]; // undefined
 ```
 
 `.pop`, `.push`, `.shift`, `.unshift`
