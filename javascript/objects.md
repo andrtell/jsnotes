@@ -53,6 +53,8 @@ d.z; // -> undefined
 ("z" in d); // -> false
 
 d.hasOwnProperty("z"); // -> false.
+
+Object.hasOwn(d, "z"); // -> false
 ```
 
 Getters and setters.
