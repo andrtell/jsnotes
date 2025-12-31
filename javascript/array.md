@@ -7,7 +7,7 @@ MDN
 
 # Arrays
 
-`[]`, `Array`, `.of`, `.at`
+`[]`, `Array`, `.of()`, `.at()`
 
 ```javascript
 let a = [];
@@ -58,7 +58,7 @@ delete b[1]; // b is [1, <1 empty item>, 3]
 b[1]; // undefined
 ```
 
-`.pop`, `.push`, `.shift`, `.unshift`
+`.pop()`, `.push()`, `.shift()`, `.unshift()`
 
 ```.javascript
 let z = [1, 3, 7, 11];
@@ -80,7 +80,7 @@ z.unshift(1); // 4 ~ .length
 z; // [1, 3, 7, 11]
 ```
 
-`.concat`
+`.concat()`
 
 ```javascript
 let x = [1, 2], y = [3, 4];
@@ -92,7 +92,7 @@ y; // [3, 4]
 
 ```
 
-`.splice`, `.toSpliced`
+`.splice()`, `.toSpliced()`
 
 
 ```javascript
@@ -119,7 +119,7 @@ y.toSpliced(1, 0, 'x'); // ['a', 'x', 'c', 'd']
 y; // ['a', 'b', 'c']
 ```
 
-`.with`
+`.with()`
 
 ```javascript
 let w = ['a', 'b', 'c'];
@@ -151,7 +151,7 @@ for (const val of d) {
 v; // [1, undefined, 3];
 ```
 
-`.forEach`
+`.forEach()`
 
 ```javascript
 let v = [], e = [1,,3]; // [1, <1 empty item>, 3]
@@ -163,7 +163,7 @@ e.forEach((val, _idx, _e) => {
 v; // [1, 3]
 ```
 
-`.slice`
+`.slice()`
 
 ```javascript
 let z = ['a', 'b', 'c', 'd'];
@@ -181,7 +181,7 @@ z.slice(2, -1); // ['c'], non-inclusive end
 z; // ['a', 'b', 'c', 'd']
 ```
 
-`.sort`, `.toSorted`
+`.sort()`, `.toSorted()`
 
 ```javascript
 let z = [3, 11, 7, 1];
@@ -197,7 +197,7 @@ y.toSorted(); // [1, 3, 7, 11]
 y; // [3, 11, 7, 1]
 ```
 
-`.reverse()`, `.toReversed`
+`.reverse()`, `.toReversed()`
 
 ```javascript
 let u = [1, 2, 3];
@@ -211,7 +211,7 @@ u.toReversed(); // [1, 2, 3]
 u; // [3, 2, 1]
 ```
 
-`.map`
+`.map()`
 
 ```javascript
 let f = [1,,3]; // [1, <1 empty item>, 3]
@@ -219,7 +219,7 @@ let f = [1,,3]; // [1, <1 empty item>, 3]
 f.map((val, _idx, _f) => val, _this); //  [1, <1 empty item>, 3]
 ```
 
-`.filter`
+`.filter()`
 
 ```javascript
 let g = [1,,3]; // [1, <1 empty item>, 3]
@@ -227,7 +227,7 @@ let g = [1,,3]; // [1, <1 empty item>, 3]
 g.filter((val, _idx, _g) => true, _this); // -> [1, 3]
 ```
 
-`.reduce`, `.reduceRight`
+`.reduce()`, `.reduceRight()`
 
 ```javascript
 let h = [1,,3]; // [1, <1 empty item>, 3]
@@ -239,7 +239,7 @@ h.reduceRight((acc, val, _idx, _h) => { acc.push(val); return acc }, []); // [3,
 h.reduce((acc, val) => acc + val); // 4 (1 + 3)
 ```
 
-`.includes`
+`.includes()`
 
 ```javascript
 let z = [1,,7, 11, 13]; // [1, <1 empty item>, 3, 7 , 11]
@@ -249,7 +249,7 @@ z.includes(7); // true
 z.includes(7, 3); // false
 ```
 
-`.some`
+`.some()`
 
 ```javascript
 let i = [1,,3]; // [1, <1 empty item>, 3]
@@ -257,7 +257,7 @@ let i = [1,,3]; // [1, <1 empty item>, 3]
 i.some((val, _idx, _i) => val == 3, _this); // true 
 ```
 
-`.every`
+`.every()`
 
 ```javascript
 let j = [1,,3]; // [1, <1 empty item>, 3]
@@ -265,7 +265,7 @@ let j = [1,,3]; // [1, <1 empty item>, 3]
 j.every((val, _idx, _j) => val == 3, _this); // false 
 ```
 
-`.indexOf`, `.lastIndexOf`
+`.indexOf()`, `.lastIndexOf()`
 
 ```javascript
 let k = [1,,3, 11, 3]; // [1, <1 empty item>, 3, 11, 3]
@@ -279,7 +279,7 @@ k.lastIndexOf(3); // 4
 k.lastIndexOf(17); // -1
 ```
 
-`.findIndex`, `.findLastIndex`
+`.findIndex()`, `.findLastIndex()`
 
 ```javascript
 
@@ -295,7 +295,7 @@ l.findLastIndex((val, _idx, _l) => val == 17, _this); // -1
 
 ```
 
-`.find`, `.findLast`
+`.find()`, `.findLast()`
 
 ```javascript
 let m = [1,,3, 11, 3]; // [1, <1 empty item>, 3, 11, 3]
