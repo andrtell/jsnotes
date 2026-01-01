@@ -72,67 +72,54 @@ q.then(
 ```
 
 ```javascript
-let p3 = new Promise(
-    function executor(resolve) {
-        f(resolve);
-    }
+let u = new Promise(
+  function executor(resolve) {
+    f(resolve);
+  }
 );
 
-let p5 = p3.then(
-    function () {
-        let p4 = new Promise(
-            function executor(resolve) {
-                g(resolve);
-            }
-        );
+let w = u.then(
+  function () {
+    let v = new Promise(
+      function executor(resolve) {
+        g(resolve);
+      }
+    );
 
-        return p4
-    }
+    return v;
+  }
 )
 
-p5.then(
-    function () {
-
-    }
-);
-
-```
-
-```javascript
-let j = function() {
-    return new Promise(
-        function executor(resolve) {
-            f(resolve);
-        }
-    )
-);
-
-let k = function() {
-    return new Promise(
-        function executor(resolve) {
-            g(resolve);
-        }
-    )
+w.then(
+  function () {
+    // ...
+  }
 );
 ```
 
 ```javascript
-let p6 = j();
+let a = function () {
+  return new Promise(function(resolve) { f(resolve); });
+}
 
-let p7 = p6.then(
-    function() { 
-        return k() 
-    }
-);
+let b = function () {
+  return new Promise(function(resolve) { g(resolve); });
+}
+```
 
-p7.then(
-    function () {
-
-    }
+```javascript
+a().then(
+  function() {
+    return b();
+  }
+).then(
+  function() {
+    // ...
+  }
 );
 ```
 
 ```javascript
-await j();
-await k();
+await a();
+await b();
 ```
