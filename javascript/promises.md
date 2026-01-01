@@ -24,24 +24,24 @@ f(
 ```
 
 ```javascript
-let p0 = new Promise(
-    function executor0(resolve) {
-        f(
-            function() {
-                g(
-                    function() {
-                        resolve();
-                    }
-                )
-            }
-        );
-    }
+let p = new Promise(
+  function executor0(resolve) {
+    f(
+      function() {
+        g(
+          function() {
+            resolve();
+          }
+        )
+      }
+    );
+  }
 );
 
-p0.then(
-    function() {
-
-    }
+p.then(
+  function() {
+    // ...
+  }
 )
 ```
 
