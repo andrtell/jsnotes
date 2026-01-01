@@ -120,6 +120,12 @@ a().then(
 ```
 
 ```javascript
+a().then(b).then(function () { /* ... */ });
+```
+
+```javascript
 await a();
 await b();
+
+// ...
 ```
