@@ -32,7 +32,7 @@ let p = new Promise(
       function() {
         g(
           function() {
-            resolve();
+            resolve(); // p is resolved.
           }
         )
       }
@@ -51,7 +51,7 @@ p.then(
 ```javascript
 let q = new Promise(
   function executor(resolve) {
-    f(resolve);
+    f(resolve); // q is resolved when f calls resolve.
   }
 );
 
@@ -59,7 +59,7 @@ q.then(
   function () {
     let r = new Promise(
       function executor(resolve) {
-        g(resolve);
+        g(resolve); // q is resolved when g calls resolve.
       }
     );
 
