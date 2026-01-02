@@ -27,12 +27,12 @@ f(
 
 ```javascript
 let p = new Promise( // p is pending.
-  function executor(resolve) { // executor runs immediately.
+  function executor(resolve) { // runs immediately.
     f(
       function() {
         g(
           function() {
-            resolve(); // p is resolved when resolve() is called.
+            resolve(); // p becomes 'fulfilled' when resolve() is called.
           }
         )
       }
@@ -40,8 +40,8 @@ let p = new Promise( // p is pending.
   }
 );
 
-p.then(
-  function() {
+p.then( 
+  function() { // queued up, called when p is 'fulfilled'.
     // ...
   }
 )
@@ -49,21 +49,21 @@ p.then(
 
 
 ```javascript
-let q = new Promise( // q is pending
+let q = new Promise(
   function executor(resolve) {
-    f(resolve); // q is resolved when f() calls resolve().
+    f(resolve);
   }
 );
 
-q.then(
+q.then( 
   function () {
-    let r = new Promise( // r is pending
+    let r = new Promise(
       function executor(resolve) {
-        g(resolve); // r is resolved when g() calls resolve().
+        g(resolve);
       }
     );
 
-    r.then(
+    r.then( // nested .then()
       function() {
         // ...
       }
