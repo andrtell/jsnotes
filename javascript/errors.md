@@ -35,23 +35,23 @@ try {
 
 ```javascript
 try {
-    // ...
+  // ...
 } catch (e) {
-    if (e instanceof RangeError) {
-        // ...
-    } else {
-        throw e;
-    }
+  if (e instanceof RangeError) {
+    // ...
+  } else {
+    throw e;
+  }
 }
 ```
 
 ```javascript
 try {
-    throw Error();
+  throw Error();
 } catch (e) {
-    throw e;
+  throw e;
 } finally {
-    // always ...
+  // ...
 }
 ```
 
@@ -63,21 +63,19 @@ try {
     // 1
   }
 } catch {
-    // 2
+  // 2
 }
 ```
 
-
 ```javascript
 function f() {
-    try {
-        throw Error();
-    } catch (e) {
-        throw e;
-    } finally {
-        return 1;
-    }
+  try {
+    throw Error();
+  } finally {
+    return 1;
+  }
 }
 
 f(); // 1
+
 ```
