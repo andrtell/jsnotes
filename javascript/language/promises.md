@@ -123,3 +123,21 @@ a().then(b).then(() => { /* ... */ });
 await a();
 await b();
 ```
+
+```javascript
+let c = () => new Promise((_resolve, reject) => g(reject));
+```
+
+```javascript
+let p = c();
+
+p.catch(() => console.log('p is rejected');
+
+// p is rejected
+```
+
+
+
+
+
+
