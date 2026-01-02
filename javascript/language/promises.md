@@ -15,9 +15,9 @@ const f = setTimeout, g = setTimeout;
 
 ```javascript
 f(
-  function() {
+  function cb() {
     g(
-      function() {
+      function cb() {
         // ...
       }
     )
@@ -44,9 +44,11 @@ let p = new Promise( // p is 'pending'.
 p.then(
   // queued up synchronously, called when p is 'fulfilled'.
   function ok() {
-    // ...
+    console.log('p is fulfilled');
   }
 )
+
+// p is fulfilled
 ```
 
 ```javascript
