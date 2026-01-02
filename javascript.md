@@ -15,16 +15,20 @@ Browser
 
 Language
 
-> [Modules](./javascript/modules.md) 
-| ["use strict"](./javascript/use_strict.md)
+> [Modules](./javascript/language/modules.md) 
+| ["use strict"](./javascript/language/use_strict.md)
 
-> [Objects](./javascript/objects.md)
-| [Prototypes](./javascript/prototype.md)
-| [This](./javascript/this.md)
+> [Objects](./javascript/language/objects.md)
+| [Prototypes](./javascript/language/prototype.md)
+| [This](./javascript/language/this.md)
 
-> [Arrays](./javascript/arrays.md)
+> [Errors](./javascript/language/errors.md)
 
-> [Iterators](./javascript/iterators.md)
+> [Arrays](./javascript/language/arrays.md)
+
+> [Iterators](./javascript/language/iterators.md)
+
+> [Promisses](./javascript/language/promisses.md)
 
 ## __Links__
 
