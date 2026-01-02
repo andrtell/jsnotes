@@ -28,7 +28,7 @@ Language
 
 > [Iterators](./javascript/language/iterators.md)
 
-> [Promisses](./javascript/language/promisses.md)
+> [Promises](./javascript/language/promises.md)
 
 ## __Links__
 
