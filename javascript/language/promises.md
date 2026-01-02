@@ -99,7 +99,7 @@ let v =
       let t = b();
       t.then(() => console.log('t is fulfilled'))
 
-      // V's faith is now tied to that of T.
+      // 'pending' promise return from .this(). V's faith is now tied to that of T.
       return t;
     }
 );
