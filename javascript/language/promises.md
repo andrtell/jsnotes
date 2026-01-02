@@ -125,7 +125,7 @@ await b();
 ```
 
 ```javascript
-let c = () => new Promise((_resolve, reject) => g(reject));
+let c = () => new Promise((_resolve, reject) => f(reject));
 ```
 
 ```javascript
@@ -136,6 +136,14 @@ p.catch(() => console.log('p is rejected');
 // p is rejected
 ```
 
+```javascript
+let q = a();
+let r = q.then(c);
+
+r.catch(() => console.log('r is rejected'));
+
+// r is rejected
+```
 
 
 
