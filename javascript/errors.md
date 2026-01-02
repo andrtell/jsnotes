@@ -10,26 +10,26 @@ MDN
 
 ```javascript
 try {
-    throw new Error():
+  throw new Error():
 } catch {
-    // ...
+  // ...
 }
-
+```
 
 ```javascript
 try {
-    throw Error("123");
+  throw Error("123");
 } catch(e) {
-    e.name;    // "Error" 
-    e.message; // "123" 
+  e.name;    // "Error" 
+  e.message; // "123" 
 }
 ```
 
 ```javascript
 try { 
-    throw Error(); 
+  throw Error(); 
 } catch (e) { 
-    throw e; // re-throw
+  throw e; // re-throw
 }
 ```
 
