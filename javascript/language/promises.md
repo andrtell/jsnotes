@@ -27,12 +27,12 @@ f(
 
 ```javascript
 let p = new Promise(
-  function executor(resolve) {
+  function executor(resolve) { // return value of executor is ignored.
     f(
       function() {
         g(
           function() {
-            resolve(); // p is resolved.
+            resolve(); // p is resolved when resolve() is called.
           }
         )
       }
@@ -51,7 +51,7 @@ p.then(
 ```javascript
 let q = new Promise(
   function executor(resolve) {
-    f(resolve); // q is resolved when f calls resolve.
+    f(resolve); // q is resolved when f() calls resolve().
   }
 );
 
@@ -59,7 +59,7 @@ q.then(
   function () {
     let r = new Promise(
       function executor(resolve) {
-        g(resolve); // q is resolved when g calls resolve.
+        g(resolve); // q is resolved when g() calls resolve().
       }
     );
 
