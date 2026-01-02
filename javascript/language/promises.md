@@ -29,10 +29,10 @@ f(
 let p = new Promise( // p is 'pending'.
   function executor(resolve) { // called synchronously.
     f(
-      function() {
+      function cb() {
         g(
-          function() {
-            // p becomes 'fulfilled' when resolve() is called with a non-promise (implicit 'undefined' here).
+          function cb() {
+            // p becomes 'fulfilled' when resolve() is given a non-promise (implicit 'undefined' here).
             resolve();     
           }
         )
@@ -41,12 +41,45 @@ let p = new Promise( // p is 'pending'.
   }
 );
 
-p.then( 
-  function() { // queued up synchronously, called when p is 'fulfilled'.
+p.then(
+  // queued up synchronously, called when p is 'fulfilled'.
+  function ok() {
     // ...
   }
 )
 ```
+
+```javascript
+let q = new Promise(
+  function executor(resolve) {
+    f(
+      function cb() {
+        r = new Promise(
+          function executor(resolve) {
+            g(
+              function cb() {
+                // r becomes 'fulfilled'.     
+                resolve(); 
+              }
+            )    
+          }
+        )
+
+        r.then(function ok() { console.log('r is fulfilled'); })
+
+        // q remains 'pending'. q's faith is now tied to that of r.
+        resolve(r);   
+      }
+    );
+  }
+);
+
+q.then(function ok() { console.log('q is fulfilled'); })
+
+// r is fulfilled
+// q is fulfilled
+```
+
 
 
 ```javascript
