@@ -140,8 +140,11 @@ p.catch(() => console.log('p is rejected');
 let q = a();
 let r = q.then(c);
 
+q.then(() => console.log('q is fulfilled'));
+
 r.catch(() => console.log('r is rejected'));
 
+// q is fulfilled
 // r is rejected
 ```
 
