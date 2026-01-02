@@ -26,8 +26,8 @@ f(
 ```
 
 ```javascript
-let p = new Promise(
-  function executor(resolve) { // return value of executor is ignored.
+let p = new Promise( // p is pending.
+  function executor(resolve) { // executor runs immediately.
     f(
       function() {
         g(
@@ -49,7 +49,7 @@ p.then(
 
 
 ```javascript
-let q = new Promise(
+let q = new Promise( // q is pending
   function executor(resolve) {
     f(resolve); // q is resolved when f() calls resolve().
   }
@@ -57,9 +57,9 @@ let q = new Promise(
 
 q.then(
   function () {
-    let r = new Promise(
+    let r = new Promise( // r is pending
       function executor(resolve) {
-        g(resolve); // q is resolved when g() calls resolve().
+        g(resolve); // r is resolved when g() calls resolve().
       }
     );
 
