@@ -48,7 +48,7 @@ p.then(
   }
 )
 
-// p is fulfilled
+// 1: p is fulfilled
 ```
 
 ```javascript
@@ -78,8 +78,8 @@ let q = new Promise(
 
 q.then(function ok() { console.log('q is fulfilled'); })
 
-// r is fulfilled
-// q is fulfilled
+// 1: r is fulfilled
+// 2: q is fulfilled
 ```
 
 ```javascript
@@ -104,9 +104,9 @@ let v =
 
 v.then(() => console.log('v is fulfilled'));
 
-// s is fulfilled
-// t is fulfilled
-// v is fulfilled
+// 1: s is fulfilled
+// 2: t is fulfilled
+// 3: v is fulfilled
 ```
 
 ```javascript
@@ -141,6 +141,8 @@ let v = q.then(c, undefined); // v will settle to that of c() (rejected).
 let x = v.catch(              // x handles rejection.
   () => console.log("v & x is rejected")
 );
+
+// 1: v & x is rejected
 ```
 
 
