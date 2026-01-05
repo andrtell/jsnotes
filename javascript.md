@@ -6,8 +6,11 @@
 NodeJS
 
 > [Install Node](./javascript/node/install_node.md)
-| [NPM](./javascript/node/npm.md)
-| [Debug using CLI](./javascript/node/debug_using_cli.md)
+> 
+> [NPM](./javascript/node/npm.md)
+| [NPX](./javascript/node/npx.md)
+> 
+> [Debug using CLI](./javascript/node/debug_using_cli.md)
 | [Debug using Chrome](./javascript/node/debug_using_chrome.md)
 
 Browser
