@@ -92,11 +92,12 @@ $ npm uninstall -D eslint
 ```sh
 $ npm install -g yo
 
-$ npm list --global
+$ npm list -g
 .
 └── yo@6.0.0
-```
 
+$ npm uninstall -g yo
+```
 
 `update`
 
