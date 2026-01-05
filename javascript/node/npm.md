@@ -40,8 +40,6 @@ $ cat package.json
 }
 ```
 
-
-
 ```sh
 $ rm -rf node_modules/
 
@@ -63,6 +61,16 @@ $ cat package.json
     "eslint": "^9.39.2"
   }
 }
+```
+
+`install -g`, `install --global`
+
+```sh
+$ npm install -g yo
+
+$ npm list --global
+.
+└── yo@6.0.0
 ```
 
 
