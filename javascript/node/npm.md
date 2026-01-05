@@ -43,7 +43,7 @@ $ cat package.json
 ```sh
 $ rm -rf node_modules/
 
-$ npm install
+$ npm install --omit=dev
 added 148 packages, and audited 149 packages in 560ms
 
 $ ls
