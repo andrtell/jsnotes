@@ -27,6 +27,18 @@ package.json
 `install`
 
 ```sh
+$ rm -rf node_modules/
+
+$ npm install --omit=dev
+added 148 packages, and audited 149 packages in 560ms
+
+$ ls
+node_modules/ package.json package-lock.json
+```
+
+`install <package>`
+
+```sh
 $ npm install express
 
 $ ls
@@ -40,17 +52,23 @@ $ cat package.json
 }
 ```
 
+`npm list`
+
 ```sh
-$ rm -rf node_modules/
-
-$ npm install --omit=dev
-added 148 packages, and audited 149 packages in 560ms
-
-$ ls
-node_modules/ package.json package-lock.json
+$ npm list
+.
+└── express@5.2.1
 ```
 
-`install -D`, `install --save-dev`
+`uninstall <package>`
+
+```
+$ npm uninstall express
+
+$ npm list
+```
+
+`install --save-dev <package>`
 
 ```sh
 $ npm install -D eslint
@@ -61,9 +79,15 @@ $ cat package.json
     "eslint": "^9.39.2"
   }
 }
+
+$ npm list -D
+.
+└── eslint@9.39.2
+
+$ npm uninstall -D eslint
 ```
 
-`install -g`, `install --global`
+`install --global`
 
 ```sh
 $ npm install -g yo
