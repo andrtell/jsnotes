@@ -40,6 +40,20 @@ $ cat package.json
 }
 ```
 
+
+
+```sh
+$ rm -rf node_modules/
+
+$ npm install
+added 148 packages, and audited 149 packages in 560ms
+
+$ ls
+node_modules/ package.json package-lock.json
+```
+
+`install -D`, `install --save-dev`
+
 ```sh
 $ npm install -D eslint
 
@@ -51,15 +65,6 @@ $ cat package.json
 }
 ```
 
-```sh
-$ rm -rf node_modules/
-
-$ npm install
-added 148 packages, and audited 149 packages in 560ms
-
-$ ls
-node_modules/ package.json package-lock.json
-```
 
 `update`
 
