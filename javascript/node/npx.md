@@ -7,3 +7,18 @@ NPM
 >
 >  
 # NPX
+
+`npx -- <pkg>[@<version>] [args...]`
+
+```sh
+$ npx cowsay "Hello, world"
+
+ ______________
+< Hello, world >
+ --------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
