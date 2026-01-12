@@ -4,6 +4,8 @@
 
 SBCL
 > [Install SBCL](./common_lisp/install_sbcl.md)
+>
+> [Shebang scripts](./common_lisp/shebang_scripts.md) 
 
 
 
