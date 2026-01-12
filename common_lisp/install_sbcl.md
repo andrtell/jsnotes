@@ -27,7 +27,7 @@ export PATH="$PATH:$HOME/opt/sbcl-2.6.0/bin"
 
 ```sh
 $ sbcl
-*
+* (quit)
 ```
 
 ## Links
