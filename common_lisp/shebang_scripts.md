@@ -1,6 +1,6 @@
 [Top](../common_lisp.md)
 
-# Scripts
+# Shebang scripts
 
 ```sh
 $ cat hello.lisp
