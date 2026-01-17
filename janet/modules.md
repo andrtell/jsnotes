@@ -1,5 +1,7 @@
 # Modules
 
+## Relative imports
+
 ```
 $ tree
 
