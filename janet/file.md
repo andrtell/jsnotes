@@ -6,11 +6,8 @@
 ```
 
 ```janet
-(defn slurp-file [path]
-  (try
-    (if-with [file (file/open path)]
-        [:ok (file/read file :all)]
-        [:error "File not found"])
-    ([err fib]
-      [:error err])))
+(defn read-file! [path]
+  (if-with [file (file/open path)]
+    (file/read file :all)
+    (error (string "File '" path "' not found"))))
 ```
