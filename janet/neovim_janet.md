@@ -1,3 +1,5 @@
+[Top](../janet.md)
+
 # Neovim + Janet
 
 ```lua
@@ -11,3 +13,10 @@ vim.pack.add({
 ```sh
 $ janet -e "(import spork/netrepl) (netrepl/server)"
 ```
+
+## Links
+
+Neovim / Conjure
+> [Conjure](https://github.com/Olical/conjure/)
+> 
+> [Quick-start:-Janet-(netrepl)](https://github.com/Olical/conjure/wiki/Quick-start:-Janet-(netrepl))
