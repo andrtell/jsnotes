@@ -6,7 +6,7 @@
 (defn main
   [& args]
   (with [f (file/open "main.janet")]
-    (print (:read f :all))))
+    (print (file/read f :all))))
 ```
 
 ```
